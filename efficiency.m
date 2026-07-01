@@ -2,7 +2,7 @@ clear all
 close all 
 clc
 
-%% Definir parámetros
+%% Define parameters
 NIA=21;
 m_c=1.4;
 T_ce=55+NIA;
@@ -23,7 +23,7 @@ At_f=(pi/4)*(D6^2-D4^2);
 At_c=(pi/4)*D2^2;
 A_e=pi*D4*Pasos*L;
 
-%% Cálculo de T_fs y T_cs
+%% Calculation of T_fs y T_cs
 
 
 T_fs=0;
@@ -44,7 +44,7 @@ Text_nueva=30;
     Text=Text_nueva;
     Tint=Tint_nueva;
 
-    %% Cálculo de h_f suponiendo T_fs y T4
+    %% Calculation of h_f suponiendo T_fs y T4
     T5=(T_fs+T_fe)/2;
 
     [densidad_f]=d_agua(T5);
@@ -62,7 +62,7 @@ Text_nueva=30;
     end
     h_f=(Nu_f*k_f)/Dh_f;
 
-    %% Cálculo de h_c sacando T_cs y suponiendo T2/T3
+    %% Calculation of h_c obtainig T_cs y assuming T2/T3
 
     T1=(T_cs+T_ce)/2;
 
@@ -81,7 +81,7 @@ Text_nueva=30;
     end
     h_c=(Nu_c*k_c)/D2;
 
-    %% Cálculo de U_ext
+    %% Calculation of U_ext
 
     lognep_ox=log(D3/D2);
     lognep_acero=log(D4/D3);
